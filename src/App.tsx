@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import WalletConnect from './Components/WalletConnect';
+//import './App.css';
+
+import contract_abi from './ContractABI/chat_abi.json';
 
 function App() {
+  const [contract, setContract] = useState<any>(null);
+
+  useEffect(() => {
+    if(contract) {
+      console.log(contract);
+    }
+  }, [contract]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <WalletConnect 
+          contractAddress="0x5FbDB2315678afecb367f032d93F642f64180aa3"
+          contract_abi={contract_abi}
+          setContract={setContract}
+        />
     </div>
   );
 }
+
+
 
 export default App;
