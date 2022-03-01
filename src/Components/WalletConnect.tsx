@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import './WalletConnect.css';
 import {ethers} from 'ethers';
 
 declare let window: any;
@@ -64,7 +63,12 @@ const WalletConnect = ({contractAddress, contract_abi, setContract}: WalletConne
         <>
             <div className='header'>
                 {userAddress ? (
-                    <div>User Address: {userAddress}</div>
+                    <>
+                        <div className='connectedMessage'>
+                            <div>Connected!</div>
+                            <div>{userAddress}</div>
+                        </div>
+                    </>
                 ) : (
                     <>
                         <div>Attempt to connect to: {contractAddress}</div>

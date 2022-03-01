@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+
+body {
+  background: #000000;
+  font-family: monospace;
+  color: #33FF00;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: #000000;
+  color: #33FF00;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid #33FF00;
+  min-height: 50px;
+  margin: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  font-family: monospace;
+  background: black;
+  margin: 1px;
+  -webkit-appearance: none;
+  border: 1px solid;
+  border-bottom: 1px solid #33FF00;
+  color: #33FF00;
+  padding: 8px;
+  border-radius: 3px;
+  font-size: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  font-family: monospace;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border: 1px solid #33FF00;
+  color: #33FF00;
+  background-color: #092B00;
+  cursor: pointer;
+  margin: 10px;
+  padding: 8px;
+  max-width: 200px;
+  border-radius: 3px;
+}
+
+.connectedMessage {
+  background-color: #042100;
+  color: #000000;
+  margin: 10px;
+  border: 1px solid #33FF00;
+  padding: 15px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container {
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #33FF00;
+  min-height: 50px;
 }

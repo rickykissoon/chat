@@ -29,3 +29,8 @@ body {
     max-width: 200px;
     border-radius: 3px;
 }
+
+.contentField {
+    background-color: #092B00;
+    color: #000000;
+}
